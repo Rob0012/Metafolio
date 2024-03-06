@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    
+    <style>
+        *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    height:100%;
+    width:100%;  
+}
+.parent{
+    
+    
+    height:100%;
+    width:100%
+}
+.container1{
+    height:10%;
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+.container2{
+    height:80%;
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    background-color: grey;
+}
+.a{
+    margin-bottom: 30px;
+    
+}
+.container2 input{
+    height:30px;
+    padding:right;
+}
+.b{
+    margin-bottom: 30px;
+    
+}
+.container2 input{
+    height:30px;
+    padding:right;
+}
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="container1">
+            <h1>abcd</h1>
+            
+        </div>
+        <div class="container2">
+            <form action="#" method="post">
+            <div class="a">
+            <label for="number">Phone no:</label>
+            <input type="text" id="number" name="number" required>
+            </div>
+            <div class="b">
+                <label for="email">Email id:</label>
+            <input type="text" id="email" name="email" required>
+            </div>
+
+            <!-- main form -->
+            <form method="post" action="{% url 'signup' %}">
+                {% csrf_token %}
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+            </form>
+        
+        </div>
+        
+    </form>
+    </div>
+    
+</body>
+</html>
